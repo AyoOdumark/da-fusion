@@ -260,7 +260,7 @@ def parse_args():
     parser.add_argument("--examples-per-class", nargs='+', type=int, default=[1, 2, 4, 8, 16])
     
     parser.add_argument("--dataset", type=str, default="coco", 
-                        choices=["spurge", "imagenet", "coco", "pascal"])
+                        choices=["spurge", "imagenet", "coco", "pascal", "natural_images"])
 
     parser.add_argument("--unet-ckpt", type=str, default=None)
 
