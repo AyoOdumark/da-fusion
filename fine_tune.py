@@ -20,6 +20,7 @@ from semantic_aug.datasets.spurge import SpurgeDataset
 from semantic_aug.datasets.imagenet import ImageNetDataset
 from semantic_aug.datasets.pascal import PASCALDataset
 from semantic_aug.datasets.natural_images import NaturalImages
+from semantic_aug.datasets.market1501 import Market1501
 
 import datasets
 import diffusers
@@ -47,7 +48,8 @@ DATASETS = {
     "coco": COCODataset, 
     "pascal": PASCALDataset,
     "imagenet": ImageNetDataset,
-    "natural_images": NaturalImages
+    "natural_images": NaturalImages,
+    "market_1501": Market1501
 }
 
 
@@ -260,7 +262,7 @@ def parse_args():
     parser.add_argument("--examples-per-class", nargs='+', type=int, default=[1, 2, 4, 8, 16])
     
     parser.add_argument("--dataset", type=str, default="coco", 
-                        choices=["spurge", "imagenet", "coco", "pascal", "natural_images"])
+                        choices=["spurge", "imagenet", "coco", "pascal", "natural_images", "market_1501"])
 
     parser.add_argument("--unet-ckpt", type=str, default=None)
 

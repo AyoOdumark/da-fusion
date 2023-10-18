@@ -3,6 +3,7 @@ from semantic_aug.datasets.spurge import SpurgeDataset
 from semantic_aug.datasets.imagenet import ImageNetDataset
 from semantic_aug.datasets.pascal import PASCALDataset
 from semantic_aug.datasets.natural_images import NaturalImages
+from semantic_aug.datasets.market1501 import Market1501
 from semantic_aug.augmentations.compose import ComposeParallel
 from semantic_aug.augmentations.compose import ComposeSequential
 from semantic_aug.augmentations.real_guidance import RealGuidance
@@ -25,7 +26,8 @@ DATASETS = {
     "coco": COCODataset, 
     "pascal": PASCALDataset,
     "imagenet": ImageNetDataset,
-    "natural_images": NaturalImages
+    "natural_images": NaturalImages,
+    "market_1501": Market1501
 }
 
 COMPOSE = {
